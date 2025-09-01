@@ -1,11 +1,13 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
+  "framework": "nextjs",
   "buildCommand": "next build",
   "outputDirectory": ".next",
-  "framework": "nextjs"
+  "installCommand": "npm install",
+  "devCommand": "next dev",
+  "regions": ["bom1"],
+  "functions": {
+    "app/**/*.tsx": {
+      "runtime": "nodejs18.x"
+    }
+  }
 }
