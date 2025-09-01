@@ -1,0 +1,54 @@
+[
+  {
+    "id": "course-1",
+    "title": "Sanskrit for Beginners",
+    "slug": "sanskrit-beginners",
+    "description": "A comprehensive introduction to Sanskrit language and grammar for complete beginners.",
+    "shortDescription": "Learn Sanskrit from scratch",
+    "category": "sanskrit",
+    "level": "beginner",
+    "price": 99,
+    "isFree": false,
+    "status": "published",
+    "featured": true,
+    "instructor": "Dr. Sanskrit Guru",
+    "duration": {
+      "hours": 20,
+      "minutes": 0
+    },
+    "lessons": [
+      {
+        "id": "lesson-1",
+        "title": "Introduction to Sanskrit",
+        "description": "Basic overview of Sanskrit language",
+        "duration": 60,
+        "videoUrl": "https://example.com/video1.mp4"
+      }
+    ],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z",
+    "publishedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "course-2",
+    "title": "Vedanta Philosophy",
+    "slug": "vedanta-philosophy",
+    "description": "Explore the ancient wisdom of Vedanta philosophy and its practical applications.",
+    "shortDescription": "Ancient wisdom for modern life",
+    "category": "vedanta",
+    "level": "intermediate",
+    "price": 149,
+    "isFree": false,
+    "status": "published",
+    "featured": false,
+    "instructor": "Swami Wisdom",
+    "duration": {
+      "hours": 30,
+      "minutes": 0
+    },
+    "lessons": [],
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z",
+    "publishedAt": "2024-01-01T00:00:00.000Z"
+  }
+]

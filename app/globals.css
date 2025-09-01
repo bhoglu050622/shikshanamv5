@@ -1,0 +1,391 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sanskrit Typography */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap');
+
+.font-sanskrit {
+  font-family: 'Noto Sans Devanagari', serif;
+}
+
+/* Theme System - CSS Custom Properties */
+:root {
+  /* Light Theme Colors (Sandalwood, Ivory, Deep Saffron, Earthy Browns) */
+  --bg-primary: #FEF7F0;
+  --bg-secondary: #F5F1E8;
+  --bg-tertiary: #EDE4D3;
+  --bg-accent: #FFF8F0;
+  --text-primary: #2D1810;
+  --text-secondary: #5D4037;
+  --text-accent: #8B4513;
+  --border-primary: #D4A574;
+  --border-secondary: #E6D3B3;
+  --accent-primary: #D97706;
+  --accent-secondary: #B45309;
+  --accent-tertiary: #92400E;
+  --bg-pattern: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='lotus' x='0' y='0' width='100' height='100' patternUnits='userSpaceOnUse'%3E%3Cpath d='M50 20 Q60 30 70 40 Q80 50 70 60 Q60 70 50 80 Q40 70 30 60 Q20 50 30 40 Q40 30 50 20' fill='none' stroke='%23D97706' stroke-opacity='0.05' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23lotus)'/%3E%3C/svg%3E");
+}
+
+/* Dark Theme Colors (Deep Indigo, Muted Black, Earthy Browns with Gold/Copper) */
+.dark {
+  --bg-primary: #0F1419;
+  --bg-secondary: #1A1F2E;
+  --bg-tertiary: #2A3142;
+  --bg-accent: #1E2532;
+  --text-primary: #F5F5DC;
+  --text-secondary: #D2B48C;
+  --text-accent: #CD853F;
+  --border-primary: #4A5568;
+  --border-secondary: #2D3748;
+  --accent-primary: #DAA520;
+  --accent-secondary: #B8860B;
+  --accent-tertiary: #CD853F;
+  --bg-pattern: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='manuscript' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Crect x='10' y='10' width='60' height='60' fill='none' stroke='%23CD853F' stroke-opacity='0.08' stroke-width='0.5'/%3E%3Cline x1='20' y1='20' x2='60' y2='20' stroke='%23CD853F' stroke-opacity='0.06' stroke-width='0.5'/%3E%3Cline x1='20' y1='30' x2='60' y2='30' stroke='%23CD853F' stroke-opacity='0.06' stroke-width='0.5'/%3E%3Cline x1='20' y1='40' x2='60' y2='40' stroke='%23CD853F' stroke-opacity='0.06' stroke-width='0.5'/%3E%3Cline x1='20' y1='50' x2='60' y2='50' stroke='%23CD853F' stroke-opacity='0.06' stroke-width='0.5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23manuscript)'/%3E%3C/svg%3E");
+}
+
+/* Base Theme Styles */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Theme-aware background patterns */
+.theme-bg-pattern {
+  background-image: var(--bg-pattern);
+  background-size: 200px 200px;
+  background-repeat: repeat;
+  opacity: 0.05;
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px var(--accent-primary);
+  }
+  50% {
+    box-shadow: 0 0 40px var(--accent-primary);
+  }
+}
+
+@keyframes sacred-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes temple-pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+/* Custom Classes */
+.sacred-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.sacred-rotate {
+  animation: sacred-rotate 20s linear infinite;
+}
+
+.temple-pulse {
+  animation: temple-pulse 4s ease-in-out infinite;
+}
+
+/* Enhanced Sanskrit Text Styling */
+.sanskrit-text {
+  font-family: 'Noto Sans Devanagari', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.sanskrit-heading {
+  font-family: 'Noto Sans Devanagari', serif;
+  font-weight: 700;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.1em;
+  color: var(--text-primary);
+}
+
+/* Indian Design Elements */
+.indian-border {
+  border-image: linear-gradient(45deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary), var(--accent-primary)) 1;
+}
+
+.indian-gradient {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 25%, var(--accent-tertiary) 50%, var(--accent-secondary) 75%, var(--accent-primary) 100%);
+}
+
+.sacred-pattern {
+  background-image: 
+    radial-gradient(circle at 25% 25%, var(--accent-primary) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, var(--accent-secondary) 0%, transparent 50%);
+}
+
+/* Enhanced Button Styles */
+.btn-sacred {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  border: 2px solid var(--border-primary);
+  box-shadow: 0 8px 32px var(--accent-primary);
+  transition: all 0.3s ease;
+  color: var(--bg-primary);
+}
+
+.btn-sacred:hover {
+  background: linear-gradient(135deg, var(--accent-secondary), var(--accent-tertiary));
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px var(--accent-primary);
+}
+
+/* Sacred Geometry Patterns */
+.sacred-geometry {
+  background-image: 
+    linear-gradient(45deg, transparent 40%, var(--accent-primary) 50%, transparent 60%),
+    linear-gradient(-45deg, transparent 40%, var(--accent-secondary) 50%, transparent 60%);
+}
+
+/* Enhanced Card Styles */
+.card-sacred {
+  background: var(--bg-accent);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-primary);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card-sacred:hover {
+  background: var(--bg-secondary);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Sanskrit Character Animations */
+.sanskrit-char {
+  display: inline-block;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+}
+
+.sanskrit-char:hover {
+  transform: scale(1.2) rotate(5deg);
+  color: var(--accent-primary);
+  text-shadow: 0 0 10px var(--accent-primary);
+}
+
+/* Temple Architecture Elements */
+.temple-arch {
+  background: linear-gradient(180deg, transparent 0%, var(--bg-tertiary) 50%, var(--bg-secondary) 100%);
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+}
+
+/* Enhanced Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--accent-primary), var(--accent-secondary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--accent-secondary), var(--accent-tertiary));
+}
+
+/* Responsive Design Enhancements */
+@media (max-width: 768px) {
+  .sanskrit-heading {
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .sanskrit-text {
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Loading Animations */
+.loading-sacred {
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary), var(--accent-primary));
+  background-size: 300% 100%;
+  animation: loading-shift 2s ease-in-out infinite;
+}
+
+@keyframes loading-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Sacred Fire Effect */
+.sacred-fire {
+  background: radial-gradient(ellipse at center, var(--accent-primary) 0%, var(--accent-secondary) 40%, transparent 70%);
+  animation: fire-flicker 3s ease-in-out infinite;
+}
+
+@keyframes fire-flicker {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(0.95);
+  }
+  75% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+}
+
+/* Om Symbol Animation */
+.om-symbol {
+  animation: om-float 4s ease-in-out infinite;
+}
+
+@keyframes om-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(-1deg);
+  }
+  75% {
+    transform: translateY(-15px) rotate(1deg);
+  }
+}
+
+/* Enhanced Focus States */
+.btn-sacred:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--accent-primary);
+}
+
+/* Sacred Text Selection */
+::selection {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+::-moz-selection {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+}
+
+/* Theme-aware component styles */
+.theme-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-card:hover {
+  background: var(--bg-tertiary);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.theme-button {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-button:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px var(--accent-primary);
+}
+
+.theme-input {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  color: var(--text-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-input:focus {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--accent-primary);
+}
+
+.theme-link {
+  color: var(--accent-primary);
+  transition: all 0.3s ease-in-out;
+}
+
+.theme-link:hover {
+  color: var(--accent-secondary);
+  text-decoration: underline;
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --accent-primary: #B45309;
+    --accent-secondary: #92400E;
+    --text-primary: #000000;
+    --bg-primary: #FFFFFF;
+  }
+  
+  .dark {
+    --accent-primary: #FFD700;
+    --accent-secondary: #FFA500;
+    --text-primary: #FFFFFF;
+    --bg-primary: #000000;
+  }
+}

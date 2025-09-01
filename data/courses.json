@@ -1,0 +1,524 @@
+{
+  "freeMasterclasses": [
+    {
+      "id": "fm-001",
+      "title": "Tatvabodha: Samkhya Darshan",
+      "sanskritTitle": "तत्वबोध: सांख्य दर्शन",
+      "date": "2024-02-15",
+      "time": "19:00",
+      "duration": "90",
+      "seatsAvailable": 108,
+      "seatsTotal": 108,
+      "acharya": "Vishal Chaurasia",
+      "description": "सांख्य और योग का गहरा ज्ञान, वैज्ञानिक दृष्टिकोण से! Deep knowledge of Samkhya and Yoga with a scientific approach!",
+      "topics": ["Samkhya Philosophy", "25 Tattvas", "Purusha and Prakriti", "Three Gunas"],
+      "level": "Beginner",
+      "language": "Hinglish"
+    },
+    {
+      "id": "fm-002",
+      "title": "Tatvabodha: Yoga Darshan",
+      "sanskritTitle": "तत्वबोध: योग दर्शन",
+      "date": "2024-02-20",
+      "time": "18:30",
+      "duration": "90",
+      "seatsAvailable": 87,
+      "seatsTotal": 108,
+      "acharya": "Vishal Chaurasia",
+      "description": "इस कक्षा में आप योग दर्शन के बारे में समझ पाएंगे और विभिन्न तत्वों और सिद्धांतों को समझते हुए दैनिक जीवन की समस्याओं का हल पाने में समर्थ हो पाएंगे।",
+      "topics": ["Yoga Philosophy", "Ashtanga Yoga", "Patanjali Sutras", "Practical Applications"],
+      "level": "Beginner",
+      "language": "Hindi"
+    },
+    {
+      "id": "fm-003",
+      "title": "Tatvabodha: Masterclass 3 - Yoga Darshan Vibhuti and Kaivalya Pada",
+      "sanskritTitle": "तत्वबोध: मास्टरक्लास ३ - योग दर्शन विभूति और कैवल्य पाद",
+      "date": "2024-02-25",
+      "time": "20:00",
+      "duration": "90",
+      "seatsAvailable": 45,
+      "seatsTotal": 108,
+      "acharya": "Vishal Chaurasia",
+      "description": "इस कक्षा में आप योग दर्शन के अंतिम २ पादों विभूति पाद और कैवल्य पाद में दिये गये ज्ञान को समझ पाएंगे।",
+      "topics": ["Vibhuti Pada", "Kaivalya Pada", "Advanced Yoga", "Spiritual Powers"],
+      "level": "Advanced",
+      "language": "Hindi"
+    },
+    {
+      "id": "fm-004",
+      "title": "Navratri Special: Decoding the Principles of Tantra",
+      "sanskritTitle": "नवरात्रि विशेष: तंत्र के सिद्धांतों का विश्लेषण",
+      "date": "2024-03-01",
+      "time": "19:30",
+      "duration": "90",
+      "seatsAvailable": 92,
+      "seatsTotal": 108,
+      "acharya": "Vishal Chaurasia",
+      "description": "इस live चर्चा में, हम प्राचीन तंत्र दर्शन के मौलिक सिद्धांतों की गहराई से समझने का प्रयास करेंगे।",
+      "topics": ["Shiva-Shakti", "Chakras", "Kundalini", "Beej Mantras", "Tantric Methods"],
+      "level": "Intermediate",
+      "language": "Hindi"
+    },
+    {
+      "id": "fm-006",
+      "title": "Stotra Chanting",
+      "sanskritTitle": "स्तोत्र पाठ",
+      "date": "2024-03-10",
+      "time": "20:30",
+      "duration": "60",
+      "seatsAvailable": 108,
+      "seatsTotal": 108,
+      "acharya": "Vishal Chaurasia",
+      "description": "Learn the art of Stotra chanting with proper pronunciation and understanding of sacred verses.",
+      "topics": ["Stotra Chanting", "Sanskrit Pronunciation", "Sacred Verses", "Devotional Practice"],
+      "level": "Beginner",
+      "language": "Hindi"
+    }
+  ],
+  "premiumCourses": [
+    {
+      "id": "pc-001",
+      "title": "Sanskrit Live Class",
+      "sanskritTitle": "संस्कृत जीवन्त कक्षा",
+      "price": 8999,
+      "originalPrice": 12999,
+      "duration": "16 weeks",
+      "sessions": 32,
+      "level": "Beginner",
+      "acharya": "Acharya Vishal Chaurasia",
+      "description": "Master Sanskrit through interactive live classes with personalized attention and traditional teaching methods.",
+      "features": [
+        "Live Interactive Sessions",
+        "Personalized Feedback",
+        "Traditional Teaching Methods",
+        "Recorded Access",
+        "Certificate of Completion"
+      ],
+      "curriculum": [
+        "Devanagari Script",
+        "Basic Grammar",
+        "Pronunciation & Chanting",
+        "Simple Texts"
+      ],
+      "image": "/courses/sanskrit-live-class.jpg"
+    },
+    {
+      "id": "pc-002",
+      "title": "Emotional Intelligence with Samkhya Darshan",
+      "sanskritTitle": "सांख्य दर्शन के साथ भावनात्मक बुद्धिमत्ता",
+      "price": 7999,
+      "originalPrice": 11999,
+      "duration": "10 weeks",
+      "sessions": 20,
+      "level": "Intermediate",
+      "acharya": "Acharya Aman Bhogal",
+      "description": "Develop emotional intelligence through the profound teachings of Samkhya philosophy and practical applications.",
+      "features": [
+        "Practical Psychology",
+        "Ancient Wisdom",
+        "Self-Assessment Tools",
+        "Live Q&A Sessions",
+        "Certificate of Completion"
+      ],
+      "curriculum": [
+        "Purusha & Prakriti",
+        "Three Gunas",
+        "Emotional Patterns",
+        "Practical Applications"
+      ],
+      "image": "/courses/emotional-intelligence-samkhya.jpg",
+      "externalUrl": "https://shikshanam.in/emotional-intelligence-with-samkhya-darshan/"
+    },
+    {
+      "id": "pc-003",
+      "title": "Online Sanskrit Course",
+      "sanskritTitle": "ऑनलाइन संस्कृत पाठ्यक्रम",
+      "price": 6999,
+      "originalPrice": 9999,
+      "duration": "12 weeks",
+      "sessions": 24,
+      "level": "Beginner",
+      "acharya": "Acharya Priya Sharma",
+      "description": "Comprehensive online Sanskrit course designed for beginners with structured learning and practical exercises.",
+      "features": [
+        "Self-Paced Learning",
+        "Interactive Exercises",
+        "Progress Tracking",
+        "Community Support",
+        "Certificate of Completion"
+      ],
+      "curriculum": [
+        "Sanskrit Basics",
+        "Grammar Fundamentals",
+        "Reading Practice",
+        "Text Analysis"
+      ],
+      "image": "/courses/online-sanskrit-course.jpg",
+      "externalUrl": "/courses/Shikshanam_Sanskrit"
+    },
+    {
+      "id": "pc-004",
+      "title": "Yoga Darshan Course",
+      "sanskritTitle": "योग दर्शन पाठ्यक्रम",
+      "price": 9999,
+      "originalPrice": 14999,
+      "duration": "14 weeks",
+      "sessions": 28,
+      "level": "Intermediate",
+      "acharya": "Acharya Vishal Chaurasia",
+      "description": "Comprehensive study of Patanjali's Yoga Sutras with philosophical insights and practical applications.",
+      "features": [
+        "Patanjali Sutras Study",
+        "Meditation Practices",
+        "Philosophy & Practice",
+        "Live Discussions",
+        "Certificate of Completion"
+      ],
+      "curriculum": [
+        "Samadhi Pada",
+        "Sadhana Pada",
+        "Vibhuti Pada",
+        "Kaivalya Pada"
+      ],
+      "image": "/courses/yoga-darshan-course.jpg",
+      "externalUrl": "https://shikshanam.in/yoga-darshan-course/"
+    },
+    {
+      "id": "pc-005",
+      "title": "Isha Upanishad Course",
+      "sanskritTitle": "ईशा उपनिषद पाठ्यक्रम",
+      "price": 7999,
+      "originalPrice": 11999,
+      "duration": "8 weeks",
+      "sessions": 16,
+      "level": "Advanced",
+      "acharya": "Acharya Aman Bhogal",
+      "description": "Deep exploration of the Isha Upanishad, revealing the essence of non-dual consciousness and spiritual wisdom.",
+      "features": [
+        "Sanskrit Text Study",
+        "Commentary Analysis",
+        "Meditation Practices",
+        "Philosophical Discussions",
+        "Certificate of Completion"
+      ],
+      "curriculum": [
+        "Invocation Mantra",
+        "Verses 1-8",
+        "Verses 9-18",
+        "Integration & Practice"
+      ],
+      "image": "/courses/isha-upanishad-course.jpg",
+      "externalUrl": "https://shikshanam.in/isha-upanishad-course/"
+    },
+    {
+      "id": "pc-006",
+      "title": "Prashna Upanishad Course",
+      "sanskritTitle": "प्रश्न उपनिषद पाठ्यक्रम",
+      "price": 8999,
+      "originalPrice": 12999,
+      "duration": "10 weeks",
+      "sessions": 20,
+      "level": "Advanced",
+      "acharya": "Acharya Priya Sharma",
+      "description": "Explore the profound questions and answers of existence through the Prashna Upanishad's timeless wisdom.",
+      "features": [
+        "Question-Based Learning",
+        "Deep Philosophical Inquiry",
+        "Traditional Commentary",
+        "Practical Insights",
+        "Certificate of Completion"
+      ],
+      "curriculum": [
+        "Six Sacred Questions",
+        "Cosmic Principles",
+        "Life & Death",
+        "Spiritual Realization"
+      ],
+      "image": "/courses/prashna-upanishad-course.jpg",
+      "externalUrl": "https://shikshanam.in/all-courses/prashna-upanishad-course/"
+    },
+    {
+      "id": "pc-007",
+      "title": "Samkhya Darshan Course",
+      "sanskritTitle": "सांख्य दर्शन पाठ्यक्रम",
+      "price": 8999,
+      "originalPrice": 12999,
+      "duration": "12 weeks",
+      "sessions": 24,
+      "level": "Intermediate",
+      "acharya": "Acharya Aman Bhogal",
+      "description": "Master the dualistic philosophy of Samkhya, understanding the fundamental principles of consciousness and matter.",
+      "features": [
+        "25 Tattvas Study",
+        "Purusha-Prakriti Analysis",
+        "Three Gunas Deep Dive",
+        "Practical Applications",
+        "Certificate of Completion"
+      ],
+      "curriculum": [
+        "Fundamental Principles",
+        "25 Tattvas",
+        "Evolution of Consciousness",
+        "Practical Philosophy"
+      ],
+      "image": "/courses/samkhya-darshan-course.jpg",
+      "externalUrl": "https://shikshanam.in/samkhya-darshan-course/"
+    },
+    {
+      "id": "pc-008",
+      "title": "Kashmir Shaivism",
+      "sanskritTitle": "कश्मीर शैवधर्म",
+      "price": 10999,
+      "originalPrice": 15999,
+      "duration": "16 weeks",
+      "sessions": 32,
+      "level": "Advanced",
+      "acharya": "Acharya Vishal Chaurasia",
+      "description": "Dive into the non-dual tantric philosophy of Kashmir Shaivism, exploring consciousness, energy, and liberation.",
+      "features": [
+        "Tantric Philosophy",
+        "Consciousness Studies",
+        "Spanda & Pratyabhijna",
+        "Advanced Practices",
+        "Certificate of Completion"
+      ],
+      "curriculum": [
+        "Shiva-Shakti Principle",
+        "36 Tattvas",
+        "Spanda Philosophy",
+        "Recognition School"
+      ],
+      "image": "/courses/kashmir-shaivism.jpg",
+      "externalUrl": "https://shikshanam.in/kashmir-shaivism/"
+    },
+    {
+      "id": "pc-009",
+      "title": "Advaita Vedanta Darshan",
+      "sanskritTitle": "अद्वैत वेदान्त दर्शन",
+      "price": 11999,
+      "originalPrice": 16999,
+      "duration": "18 weeks",
+      "sessions": 36,
+      "level": "Advanced",
+      "acharya": "Acharya Aman Bhogal",
+      "description": "Journey through Drig Drishya Viveka and explore the non-dual reality through Advaita Vedanta philosophy.",
+      "features": [
+        "Non-Dual Philosophy",
+        "Drig Drishya Viveka",
+        "Self-Inquiry Methods",
+        "Classical Texts",
+        "Certificate of Completion"
+      ],
+      "curriculum": [
+        "Vedantic Foundations",
+        "Drig Drishya Analysis",
+        "Brahman Realization",
+        "Practical Vedanta"
+      ],
+      "image": "/courses/advaita-vedanta-darshan.jpg",
+      "externalUrl": "https://shikshanam.in/advaita-vedanta-darshan-a-journey-through-drig-drishya-viveka/"
+    }
+  ],
+  "liveCourses": [
+    {
+      "id": "lc-001",
+      "title": "Bhagavad Gita: Live Study Circle",
+      "sanskritTitle": "भगवद्गीता: जीवंत अध्ययन चक्र",
+      "startDate": "2024-02-28",
+      "endDate": "2024-05-28",
+      "schedule": "Every Wednesday & Saturday",
+      "time": "19:00-20:30",
+      "price": 5999,
+      "seatsAvailable": 54,
+      "seatsTotal": 108,
+      "acharya": "Acharya Vishal Chaurasia",
+      "description": "Interactive study of the Bhagavad Gita with real-time discussions.",
+      "features": [
+        "Real-time Q&A",
+        "Group Chanting",
+        "Global Cohort",
+        "Weekly Assignments"
+      ],
+      "chapters": ["Chapter 1-6", "Chapter 7-12", "Chapter 13-18"]
+    },
+    {
+      "id": "lc-002",
+      "title": "Sanskrit Grammar Intensive",
+      "sanskritTitle": "संस्कृत व्याकरण गहन",
+      "startDate": "2024-03-05",
+      "endDate": "2024-04-05",
+      "schedule": "Every Tuesday & Thursday",
+      "time": "18:00-19:30",
+      "price": 3999,
+      "seatsAvailable": 23,
+      "seatsTotal": 108,
+      "acharya": "Acharya Priya Sharma",
+      "description": "Intensive Sanskrit grammar course with live practice sessions.",
+      "features": [
+        "Live Pronunciation",
+        "Grammar Exercises",
+        "Text Reading",
+        "Cultural Context"
+      ],
+      "topics": ["Sandhi", "Samasa", "Karakas", "Tenses"]
+    },
+    {
+      "id": "lc-003",
+      "title": "Meditation & Mindfulness",
+      "sanskritTitle": "ध्यान और सचेतनता",
+      "startDate": "2024-03-10",
+      "endDate": "2024-04-10",
+      "schedule": "Every Monday & Friday",
+      "time": "20:00-21:00",
+      "price": 2999,
+      "seatsAvailable": 89,
+      "seatsTotal": 108,
+      "acharya": "Acharya Aman Bhogal",
+      "description": "Learn authentic meditation techniques from ancient texts.",
+      "features": [
+        "Guided Meditation",
+        "Breathing Techniques",
+        "Mindfulness Practices",
+        "Group Support"
+      ],
+      "techniques": ["Pranayama", "Dharana", "Dhyana", "Samadhi"]
+    }
+  ],
+  "allCourses": [
+    {
+      "id": "ac-001",
+      "title": "Vedanta Fundamentals",
+      "type": "premium",
+      "school": "Vedanta",
+      "level": "Beginner",
+      "language": "English",
+      "price": 4999,
+      "duration": "6 weeks",
+      "acharya": "Acharya Vishal Chaurasia",
+      "description": "Foundation course in Vedanta philosophy",
+      "image": "/courses/vedanta-fundamentals.jpg"
+    },
+    {
+      "id": "ac-002", 
+      "title": "Samkhya Philosophy",
+      "type": "premium",
+      "school": "Samkhya",
+      "level": "Intermediate",
+      "language": "English",
+      "price": 6999,
+      "duration": "8 weeks",
+      "acharya": "Acharya Aman Bhogal",
+      "description": "Understanding the dualistic philosophy of Samkhya",
+      "image": "/courses/samkhya-philosophy.jpg"
+    },
+    {
+      "id": "ac-003",
+      "title": "Nyaya Logic",
+      "type": "premium", 
+      "school": "Nyaya",
+      "level": "Advanced",
+      "language": "English",
+      "price": 8999,
+      "duration": "10 weeks",
+      "acharya": "Acharya Priya Sharma",
+      "description": "Study of Nyaya logic and epistemology",
+      "image": "/courses/nyaya-logic.jpg"
+    },
+    {
+      "id": "ac-004",
+      "title": "Vaisheshika Physics",
+      "type": "premium",
+      "school": "Vaisheshika", 
+      "level": "Intermediate",
+      "language": "English",
+      "price": 7999,
+      "duration": "8 weeks",
+      "acharya": "Acharya Vishal Chaurasia",
+      "description": "Ancient Indian atomic theory and physics",
+      "image": "/courses/vaisheshika-physics.jpg"
+    },
+    {
+      "id": "ac-005",
+      "title": "Mimamsa Rituals",
+      "type": "premium",
+      "school": "Mimamsa",
+      "level": "Advanced",
+      "language": "English",
+      "price": 9999,
+      "duration": "12 weeks", 
+      "acharya": "Acharya Aman Bhogal",
+      "description": "Understanding Vedic rituals and their significance",
+      "image": "/courses/mimamsa-rituals.jpg"
+    },
+    {
+      "id": "ac-006",
+      "title": "Sanskrit for Yogis",
+      "type": "live",
+      "school": "Yoga",
+      "level": "Beginner",
+      "language": "Sanskrit",
+      "price": 3999,
+      "duration": "4 weeks",
+      "acharya": "Acharya Priya Sharma",
+      "description": "Sanskrit essentials for yoga practitioners",
+      "image": "/courses/sanskrit-for-yogis.jpg"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "t-001",
+      "name": "Dr. Sarah Johnson",
+      "role": "Yoga Teacher",
+      "content": "The Yoga Darshan course transformed my understanding of yoga beyond the physical. Acharya Vishal's depth of knowledge is incredible.",
+      "rating": 5,
+      "course": "Yoga Darshan: Complete Journey"
+    },
+    {
+      "id": "t-002", 
+      "name": "Rajesh Kumar",
+      "role": "Software Engineer",
+      "content": "Learning Sanskrit through Shikshanam has been a revelation. The live sessions make ancient wisdom accessible and engaging.",
+      "rating": 5,
+      "course": "Sanskrit for Beginners"
+    },
+    {
+      "id": "t-003",
+      "name": "Priya Patel",
+      "role": "Meditation Guide",
+      "content": "The Isha Upanishad course opened new dimensions in my spiritual practice. The community aspect is truly enriching.",
+      "rating": 5,
+      "course": "Isha Upanishad: Essence of Oneness"
+    },
+    {
+      "id": "t-004",
+      "name": "Michael Chen",
+      "role": "Business Consultant",
+      "content": "Chanakya's Code provided practical leadership insights that I use daily in my consulting practice. Highly recommended!",
+      "rating": 5,
+      "course": "Chanakya's Code: Ancient Leadership"
+    }
+  ],
+  "bundleOffers": [
+    {
+      "id": "bundle-001",
+      "title": "Sanskrit Mastery Package",
+      "description": "Complete Sanskrit learning journey from basics to advanced texts",
+      "courses": ["Sanskrit for Beginners", "Sanskrit Grammar Intensive", "Isha Upanishad"],
+      "originalPrice": 19997,
+      "bundlePrice": 14999,
+      "savings": 4998,
+      "savingsPercentage": 25
+    },
+    {
+      "id": "bundle-002", 
+      "title": "Darshanas Explorer",
+      "description": "Journey through all six classical schools of Indian philosophy",
+      "courses": ["Vedanta Fundamentals", "Samkhya Philosophy", "Nyaya Logic", "Vaisheshika Physics", "Mimamsa Rituals", "Yoga Darshan"],
+      "originalPrice": 49994,
+      "bundlePrice": 34999,
+      "savings": 14995,
+      "savingsPercentage": 30
+    }
+  ]
+}

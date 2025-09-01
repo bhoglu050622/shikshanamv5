@@ -1,0 +1,28 @@
+[
+  {
+    "id": "testimonial-1",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "title": "Student",
+    "company": "Self-employed",
+    "rating": 5,
+    "testimonial": "The Sanskrit course completely transformed my understanding of ancient texts. The instructors are incredibly knowledgeable and patient.",
+    "status": "approved",
+    "featured": true,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "testimonial-2",
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "title": "Yoga Teacher",
+    "company": "Peaceful Yoga Studio",
+    "rating": 5,
+    "testimonial": "Learning Sanskrit has deepened my yoga practice and helped me connect with the ancient wisdom in a profound way.",
+    "status": "approved",
+    "featured": false,
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  }
+]

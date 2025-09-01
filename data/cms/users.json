@@ -1,0 +1,11 @@
+[
+  {
+    "id": "admin-1",
+    "name": "Admin",
+    "email": "admin@shikshanam.com",
+    "role": "admin",
+    "password": "adminadmin",
+    "createdAt": "2025-08-31T13:12:35.161Z",
+    "updatedAt": "2025-08-31T13:12:35.162Z"
+  }
+]
