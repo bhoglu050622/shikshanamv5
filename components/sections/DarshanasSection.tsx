@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { Sparkles, Star, BookOpen, Brain, Heart, Target, Zap, Eye } from 'lucide-react'
 import { AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 
 // 3D Chakra Node Component
 function ChakraNode3D({ 
@@ -430,15 +431,17 @@ export default function DarshanasSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, delay: 1 }}
         >
-          <motion.button
-            className="bg-gradient-to-r from-primary-light to-accent-light dark:from-primary-dark dark:to-accent-dark text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-3 mx-auto group hover:shadow-xl transition-all duration-300"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <BookOpen className="w-5 h-5" />
-            Explore All Darshanas
-            <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-          </motion.button>
+          <Link href="/sixdharshans">
+            <motion.button
+              className="bg-gradient-to-r from-primary-light to-accent-light dark:from-primary-dark dark:to-accent-dark text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-3 mx-auto group hover:shadow-xl transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <BookOpen className="w-5 h-5" />
+              Explore All Darshanas
+              <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

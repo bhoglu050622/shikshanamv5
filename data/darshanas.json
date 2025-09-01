@@ -1,0 +1,189 @@
+{
+  "darshanas": [
+    {
+      "id": "mimamsa",
+      "title": "Mīmāṃsā",
+      "sanskrit": "मीमांसा",
+      "subtitle": "The Science of Sacred Rituals",
+      "description": "Master the ancient art of interpreting Vedic texts and performing sacred rituals with perfect precision. Unlock the power of mantras and ceremonial wisdom that connects you directly to divine forces.",
+      "shortDescription": "Sacred ritual interpretation and ceremonial wisdom",
+      "color": "from-orange-500 to-red-600",
+      "bgColor": "bg-gradient-to-br from-orange-500/20 to-red-600/20",
+      "textColor": "text-orange-600 dark:text-orange-400",
+      "icon": "BookOpen",
+      "level": "Beginner",
+      "xpReward": 150,
+      "questCount": 12,
+      "estimatedTime": "3-4 weeks",
+      "themes": ["ritual", "interpretation", "vedic"],
+      "gamificationElements": {
+        "badge": "Ritual Master",
+        "achievements": ["First Mantra", "Sacred Fire", "Perfect Ceremony"],
+        "progressPath": "Novice → Acolyte → Ritual Master → Sacred Interpreter"
+      },
+      "courseLinks": {
+        "free": "/courses/free-masterclass",
+        "premium": "/courses/premium-courses"
+      }
+    },
+    {
+      "id": "nyaya",
+      "title": "Nyāya",
+      "sanskrit": "न्याय",
+      "subtitle": "The Path of Logical Reasoning",
+      "description": "Sharpen your mind with the most sophisticated system of logic ever developed. Master the art of debate, critical thinking, and discovering absolute truth through systematic reasoning.",
+      "shortDescription": "Logical reasoning and systematic debate",
+      "color": "from-blue-500 to-indigo-600",
+      "bgColor": "bg-gradient-to-br from-blue-500/20 to-indigo-600/20",
+      "textColor": "text-blue-600 dark:text-blue-400",
+      "icon": "Target",
+      "level": "Intermediate",
+      "xpReward": 200,
+      "questCount": 15,
+      "estimatedTime": "4-5 weeks",
+      "themes": ["logic", "debate", "reasoning"],
+      "gamificationElements": {
+        "badge": "Logic Master",
+        "achievements": ["First Syllogism", "Debate Victory", "Truth Seeker"],
+        "progressPath": "Student → Debater → Logic Master → Truth Keeper"
+      },
+      "courseLinks": {
+        "free": "/courses/free-masterclass",
+        "premium": "/courses/premium-courses"
+      }
+    },
+    {
+      "id": "vaisheshika",
+      "title": "Vaiśeṣika",
+      "sanskrit": "वैशेषिक",
+      "subtitle": "The Atomic Science of Reality",
+      "description": "Explore the fundamental building blocks of the universe through ancient atomic theory. Understand how consciousness, matter, and energy interact to create all of reality.",
+      "shortDescription": "Atomic theory and fundamental reality principles",
+      "color": "from-purple-500 to-violet-600",
+      "bgColor": "bg-gradient-to-br from-purple-500/20 to-violet-600/20",
+      "textColor": "text-purple-600 dark:text-purple-400",
+      "icon": "Zap",
+      "level": "Advanced",
+      "xpReward": 250,
+      "questCount": 18,
+      "estimatedTime": "5-6 weeks",
+      "themes": ["atomic", "reality", "consciousness"],
+      "gamificationElements": {
+        "badge": "Reality Architect",
+        "achievements": ["Atomic Vision", "Matter Master", "Cosmic Designer"],
+        "progressPath": "Observer → Analyzer → Reality Architect → Cosmic Designer"
+      },
+      "courseLinks": {
+        "free": "/courses/free-masterclass",
+        "premium": "/courses/premium-courses"
+      }
+    },
+    {
+      "id": "samkhya",
+      "title": "Sāṃkhya",
+      "sanskrit": "सांख्य",
+      "subtitle": "The Analytical Path to Liberation",
+      "description": "Understand the dual nature of consciousness (Purusha) and matter (Prakriti). Master the 24 cosmic principles and achieve liberation through pure analytical knowledge.",
+      "shortDescription": "Consciousness analysis and cosmic principles",
+      "color": "from-green-500 to-emerald-600",
+      "bgColor": "bg-gradient-to-br from-green-500/20 to-emerald-600/20",
+      "textColor": "text-green-600 dark:text-green-400",
+      "icon": "Brain",
+      "level": "Advanced",
+      "xpReward": 300,
+      "questCount": 20,
+      "estimatedTime": "6-7 weeks",
+      "themes": ["consciousness", "analysis", "liberation"],
+      "gamificationElements": {
+        "badge": "Consciousness Sage",
+        "achievements": ["Purusha Realization", "Prakriti Master", "Cosmic Balance"],
+        "progressPath": "Seeker → Analyst → Consciousness Sage → Liberation Master"
+      },
+      "courseLinks": {
+        "free": "/courses/free-masterclass",
+        "premium": "/courses/premium-courses"
+      }
+    },
+    {
+      "id": "yoga",
+      "title": "Yoga",
+      "sanskrit": "योग",
+      "subtitle": "The Path of Divine Union",
+      "description": "Transform your life through the eight-limbed path of Patanjali. Master meditation, ethical living, and achieve complete union with the divine consciousness.",
+      "shortDescription": "Spiritual discipline and divine union practices",
+      "color": "from-cyan-500 to-blue-600",
+      "bgColor": "bg-gradient-to-br from-cyan-500/20 to-blue-600/20",
+      "textColor": "text-cyan-600 dark:text-cyan-400",
+      "icon": "Heart",
+      "level": "Beginner",
+      "xpReward": 175,
+      "questCount": 16,
+      "estimatedTime": "4-5 weeks",
+      "themes": ["meditation", "ethics", "union"],
+      "gamificationElements": {
+        "badge": "Union Master",
+        "achievements": ["First Samadhi", "Ethical Living", "Divine Connection"],
+        "progressPath": "Practitioner → Yogi → Union Master → Divine Vessel"
+      },
+      "courseLinks": {
+        "free": "/courses/free-masterclass",
+        "premium": "/courses/premium-courses"
+      }
+    },
+    {
+      "id": "vedanta",
+      "title": "Vedānta",
+      "sanskrit": "वेदान्त",
+      "subtitle": "The Ultimate Truth of Non-Duality",
+      "description": "Realize the highest truth that you and the universe are one. Master the profound wisdom of Advaita and achieve complete spiritual liberation and enlightenment.",
+      "shortDescription": "Non-dual wisdom and ultimate truth realization",
+      "color": "from-amber-500 to-orange-600",
+      "bgColor": "bg-gradient-to-br from-amber-500/20 to-orange-600/20",
+      "textColor": "text-amber-600 dark:text-amber-400",
+      "icon": "Eye",
+      "level": "Master",
+      "xpReward": 500,
+      "questCount": 25,
+      "estimatedTime": "8-10 weeks",
+      "themes": ["non-duality", "enlightenment", "liberation"],
+      "gamificationElements": {
+        "badge": "Enlightened Sage",
+        "achievements": ["Self Realization", "Unity Consciousness", "Final Liberation"],
+        "progressPath": "Student → Scholar → Enlightened Sage → Liberated Being"
+      },
+      "courseLinks": {
+        "free": "/courses/free-masterclass",
+        "premium": "/courses/premium-courses"
+      }
+    }
+  ],
+  "gamificationSystem": {
+    "levels": [
+      {"level": 1, "title": "Spiritual Seeker", "xpRequired": 0, "rewards": ["Basic meditation guide"]},
+      {"level": 2, "title": "Wisdom Student", "xpRequired": 500, "rewards": ["Daily quest unlock"]},
+      {"level": 3, "title": "Philosophy Adept", "xpRequired": 1200, "rewards": ["Advanced courses access"]},
+      {"level": 4, "title": "Darshana Scholar", "xpRequired": 2500, "rewards": ["Master-level content"]},
+      {"level": 5, "title": "Enlightened Sage", "xpRequired": 5000, "rewards": ["Complete liberation path"]}
+    ],
+    "badges": [
+      {"id": "first_steps", "title": "First Steps", "description": "Completed your first darshana module"},
+      {"id": "daily_seeker", "title": "Daily Seeker", "description": "7-day learning streak"},
+      {"id": "philosophy_master", "title": "Philosophy Master", "description": "Completed 3 darshanas"},
+      {"id": "wisdom_keeper", "title": "Wisdom Keeper", "description": "Completed all 6 darshanas"},
+      {"id": "meditation_master", "title": "Meditation Master", "description": "100 hours of practice logged"}
+    ],
+    "dailyQuests": [
+      "Complete one lesson in any darshana",
+      "Practice meditation for 10 minutes",
+      "Read one Sanskrit verse with translation",
+      "Share wisdom with the community",
+      "Reflect on today's philosophical insights"
+    ]
+  },
+  "progressPaths": {
+    "beginner": ["yoga", "mimamsa", "nyaya"],
+    "intermediate": ["samkhya", "vaisheshika"],
+    "advanced": ["vedanta"],
+    "recommended_order": ["yoga", "nyaya", "mimamsa", "samkhya", "vaisheshika", "vedanta"]
+  }
+}

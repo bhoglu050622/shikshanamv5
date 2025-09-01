@@ -5,6 +5,32 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    // Gradient directions
+    'bg-gradient-to-r',
+    'bg-gradient-to-br',
+    // Gradient stops used via JSON (darshanas.json)
+    'from-orange-500', 'to-red-600',
+    'from-blue-500', 'to-indigo-600',
+    'from-purple-500', 'to-violet-600',
+    'from-green-500', 'to-emerald-600',
+    'from-cyan-500', 'to-blue-600',
+    'from-amber-500', 'to-orange-600',
+    // Gradient stops with opacity (used in detail page backgrounds)
+    'from-orange-500/20', 'to-red-600/20',
+    'from-blue-500/20', 'to-indigo-600/20',
+    'from-purple-500/20', 'to-violet-600/20',
+    'from-green-500/20', 'to-emerald-600/20',
+    'from-cyan-500/20', 'to-blue-600/20',
+    'from-amber-500/20', 'to-orange-600/20',
+    // Text color classes used via JSON
+    'text-orange-600', 'dark:text-orange-400',
+    'text-blue-600', 'dark:text-blue-400',
+    'text-purple-600', 'dark:text-purple-400',
+    'text-green-600', 'dark:text-green-400',
+    'text-cyan-600', 'dark:text-cyan-400',
+    'text-amber-600', 'dark:text-amber-400',
+  ],
   darkMode: 'class', // Enable dark mode
   theme: {
     extend: {

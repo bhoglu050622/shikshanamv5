@@ -1,0 +1,514 @@
+{
+  "questline": {
+    "id": "mimamsa-quest",
+    "title": "Mīmāṃsā Quest",
+    "sanskrit": "मीमांसा",
+    "subtitle": "The Science of Sacred Rituals",
+    "description": "Interpret the sacred. Perform with precision. Rise through the ritual ranks.",
+    "totalXP": 150,
+    "totalQuests": 12,
+    "estimatedTime": "3-4 weeks",
+    "color": "from-orange-500 to-red-600",
+    "bgColor": "bg-gradient-to-br from-orange-500/20 to-red-600/20",
+    "textColor": "text-orange-600 dark:text-orange-400"
+  },
+  "progressionPath": [
+    {
+      "rank": "Novice",
+      "questRange": [1, 3],
+      "title": "Sacred Seeker",
+      "description": "Learning the fundamentals of Vedic ritual",
+      "icon": "Flame",
+      "color": "from-orange-400 to-orange-500"
+    },
+    {
+      "rank": "Acolyte", 
+      "questRange": [4, 7],
+      "title": "Ritual Apprentice",
+      "description": "Understanding the deeper meanings of ceremony",
+      "icon": "BookOpen",
+      "color": "from-orange-500 to-red-500"
+    },
+    {
+      "rank": "Ritual Master",
+      "questRange": [8, 10],
+      "title": "Sacred Performer",
+      "description": "Mastering complex ceremonial sequences",
+      "icon": "Award",
+      "color": "from-red-500 to-red-600"
+    },
+    {
+      "rank": "Sacred Interpreter",
+      "questRange": [11, 12],
+      "title": "Divine Interpreter",
+      "description": "Understanding the cosmic significance of action",
+      "icon": "Eye",
+      "color": "from-red-600 to-amber-600"
+    }
+  ],
+  "badges": [
+    {
+      "id": "fire_kindler",
+      "title": "Fire Kindler",
+      "description": "Successfully lit your first sacred fire",
+      "icon": "Flame",
+      "questRequired": 1,
+      "xpReward": 10
+    },
+    {
+      "id": "mantra_matcher",
+      "title": "Mantra Matcher",
+      "description": "Perfectly matched mantras to their purposes",
+      "icon": "Volume2",
+      "questRequired": 3,
+      "xpReward": 15
+    },
+    {
+      "id": "sequence_seer",
+      "title": "Sequence Seer",
+      "description": "Mastered the order of ritual sequences",
+      "icon": "ArrowRight",
+      "questRequired": 6,
+      "xpReward": 20
+    },
+    {
+      "id": "interpreter_of_action",
+      "title": "Interpreter of Action",
+      "description": "Understanding the cosmic significance of every action",
+      "icon": "Brain",
+      "questRequired": 12,
+      "xpReward": 25
+    }
+  ],
+  "quests": [
+    {
+      "id": 1,
+      "title": "Lighting the Sacred Fire",
+      "sanskrit": "अग्नि प्रज्वलन",
+      "description": "Learn the sacred art of kindling Agni, the divine messenger",
+      "narrative": "In the dawn of time, Agni was born as the bridge between earth and heaven. As you strike the flint, you're not just lighting fire—you're awakening the cosmic force that carries your prayers to the gods.",
+      "xpReward": 12,
+      "type": "interactive",
+      "difficulty": "beginner",
+      "estimatedTime": "15 minutes",
+      "status": "unlocked",
+      "gameplayElements": {
+        "type": "sequence_puzzle",
+        "description": "Arrange the ritual materials in correct order",
+        "options": [
+          "Dry tinder and kindling wood",
+          "Sacred ghee for offering", 
+          "Specific mantras for invocation",
+          "Pure water for purification"
+        ],
+        "correctSequence": [3, 0, 1, 2],
+        "feedback": {
+          "correct": "Perfect! The fire blazes with divine energy. Agni awakens to carry your intentions.",
+          "incorrect": "The fire sputters. Remember: purify first, invoke Agni, then kindle the flame with offerings."
+        }
+      },
+      "loreContent": {
+        "mantra": "अग्ने नय सुपथा राये अस्मान्",
+        "translation": "O Agni, lead us on the right path to prosperity",
+        "context": "From Isha Upanishad - Agni as the divine guide and purifier"
+      },
+      "reflection": "How does the act of lighting fire connect you to the ancient practitioners who performed this same ritual thousands of years ago?"
+    },
+    {
+      "id": 2,
+      "title": "Understanding Dharma in Action",
+      "sanskrit": "कर्म धर्म",
+      "description": "Explore how every ritual action carries cosmic significance",
+      "narrative": "Every gesture in Vedic ritual is a word in the language of the cosmos. The way you hold your hands, the direction you face, the time you choose—all speak to the underlying order of dharma.",
+      "xpReward": 10,
+      "type": "decision_tree",
+      "difficulty": "beginner", 
+      "estimatedTime": "12 minutes",
+      "status": "locked",
+      "gameplayElements": {
+        "type": "scenario_choice",
+        "description": "Choose the dharmic action in different ritual scenarios",
+        "scenarios": [
+          {
+            "situation": "During sunset prayers, you realize you're facing west instead of east. What do you do?",
+            "choices": [
+              "Continue facing west, as changing direction mid-prayer is disruptive",
+              "Pause, reorient to east, and restart the prayer",
+              "Finish the current verse, then turn east",
+              "Face north as a compromise direction"
+            ],
+            "correct": 1,
+            "explanation": "Dharmic action requires correction when error is discovered. Restarting with proper orientation honors the cosmic order."
+          }
+        ]
+      },
+      "loreContent": {
+        "mantra": "धर्मो विश्वस्य जगतः प्रतिष्ठा",
+        "translation": "Dharma is the foundation of the entire universe",
+        "context": "Understanding that ritual aligns us with cosmic order"
+      },
+      "reflection": "How does understanding dharma change your approach to daily actions beyond ritual?"
+    },
+    {
+      "id": 3,
+      "title": "Mantras and Their Meanings",
+      "sanskrit": "मन्त्र अर्थ",
+      "description": "Match sacred sounds to their divine purposes and understand the power of pronunciation",
+      "narrative": "Mantras are not mere words but vibrational keys that unlock cosmic energies. Each syllable carries power, each tone creates resonance with different aspects of reality.",
+      "xpReward": 15,
+      "type": "matching_game",
+      "difficulty": "intermediate",
+      "estimatedTime": "20 minutes",
+      "status": "locked",
+      "gameplayElements": {
+        "type": "mantra_matching",
+        "description": "Match each mantra with its correct purpose and timing",
+        "pairs": [
+          {
+            "mantra": "ॐ गं गणपतये नमः",
+            "purpose": "Removing obstacles at ritual beginning",
+            "timing": "Always first"
+          },
+          {
+            "mantra": "ॐ नमो भगवते वासुदेवाय",
+            "purpose": "Invoking divine presence",
+            "timing": "After purification"
+          },
+          {
+            "mantra": "सर्वे भवन्तु सुखिनः",
+            "purpose": "Universal blessing for completion",
+            "timing": "Final blessing"
+          }
+        ]
+      },
+      "loreContent": {
+        "mantra": "मनन्यस्त्रायते इति मन्त्रः",
+        "translation": "That which protects through contemplation is a mantra",
+        "context": "The etymological definition of mantra from ancient texts"
+      },
+      "reflection": "How does conscious pronunciation of mantras change their effect compared to mechanical repetition?"
+    },
+    {
+      "id": 4,
+      "title": "Sacred Geometry of the Altar",
+      "sanskrit": "वेदी ज्यामिति",
+      "description": "Construct the perfect altar using Vedic proportions and cosmic alignments",
+      "narrative": "The altar is a microcosm of the universe itself. Its proportions mirror cosmic ratios, its orientation aligns with celestial movements. You are building not just a table, but a doorway between worlds.",
+      "xpReward": 14,
+      "type": "construction_puzzle", 
+      "difficulty": "intermediate",
+      "estimatedTime": "25 minutes",
+      "status": "locked",
+      "gameplayElements": {
+        "type": "construction_puzzle",
+        "description": "Build a ritual altar with correct proportions and placements",
+        "elements": [
+          {
+            "item": "Central fire pit",
+            "position": "center",
+            "significance": "Sacred fire at the heart of creation"
+          },
+          {
+            "item": "Water vessel",
+            "position": "northeast",
+            "significance": "Source of life and purification"
+          },
+          {
+            "item": "Offerings platform", 
+            "position": "southeast",
+            "significance": "Direction of Agni and divine offerings"
+          }
+        ]
+      },
+      "loreContent": {
+        "mantra": "यत्र देवा देवयजनं तन्वानाः",
+        "translation": "Where the gods stretch out the divine sacrifice",
+        "context": "The altar as cosmic space from Rigveda"
+      },
+      "reflection": "How does creating sacred space through geometry affect your consciousness during ritual?"
+    },
+    {
+      "id": 5,
+      "title": "Timing and Cosmic Rhythms",
+      "sanskrit": "काल चक्र",
+      "description": "Learn when to perform different rituals based on celestial movements",
+      "narrative": "Time is not uniform in the Vedic understanding. There are auspicious moments when the veil between dimensions is thin, when cosmic energies flow differently. Learning to read these rhythms is essential for effective ritual.",
+      "xpReward": 13,
+      "type": "timing_puzzle",
+      "difficulty": "intermediate",
+      "estimatedTime": "18 minutes", 
+      "status": "locked",
+      "gameplayElements": {
+        "type": "timing_puzzle",
+        "description": "Schedule rituals at optimal cosmic timings",
+        "timeFactors": [
+          "Lunar phases",
+          "Solar transitions",
+          "Planetary alignments",
+          "Seasonal changes"
+        ]
+      },
+      "loreContent": {
+        "mantra": "कालो ब्रह्म परं धाम",
+        "translation": "Time is the supreme abode of Brahman",
+        "context": "Time as divine principle in Vedantic thought"
+      },
+      "reflection": "How does awareness of cosmic timing change your relationship with daily routines?"
+    },
+    {
+      "id": 6,
+      "title": "The Language of Gesture",
+      "sanskrit": "हस्त मुद्रा",
+      "description": "Master the sacred hand positions that channel different energies",
+      "narrative": "Your hands are instruments of divine will. Each finger represents an element, each position creates a circuit for specific energies. Ancient sages encoded entire philosophies into these elegant forms.",
+      "xpReward": 12,
+      "type": "gesture_practice",
+      "difficulty": "intermediate",
+      "estimatedTime": "22 minutes",
+      "status": "locked",
+      "gameplayElements": {
+        "type": "gesture_practice",
+        "description": "Perform correct hand gestures for different ritual purposes",
+        "mudras": [
+          {
+            "name": "Dhyana Mudra",
+            "purpose": "Meditation and inner focus",
+            "elements": "Water and space"
+          },
+          {
+            "name": "Abhaya Mudra", 
+            "purpose": "Offering protection and fearlessness",
+            "elements": "Fire and air"
+          }
+        ]
+      },
+      "loreContent": {
+        "mantra": "हस्तो लोकस्य धरणी",
+        "translation": "The hand is the sustainer of the world",
+        "context": "Hands as cosmic instruments in Tantra"
+      },
+      "reflection": "How do conscious hand positions affect your mental and emotional state during practice?"
+    },
+    {
+      "id": 7,
+      "title": "Offerings and their Significance",
+      "sanskrit": "यज्ञ द्रव्य",
+      "description": "Understand the cosmic meaning behind different ritual offerings",
+      "narrative": "Every offering is a conversation with the universe. Rice represents prosperity, flowers represent beauty, water represents life itself. Learning this language allows you to speak directly with cosmic forces.",
+      "xpReward": 11,
+      "type": "symbolic_interpretation",
+      "difficulty": "advanced",
+      "estimatedTime": "20 minutes",
+      "status": "locked",
+      "gameplayElements": {
+        "type": "symbolic_interpretation",
+        "description": "Match offerings with their cosmic significance and appropriate timing",
+        "offerings": [
+          {
+            "item": "White rice",
+            "meaning": "Abundance and nourishment",
+            "deity": "Lakshmi",
+            "timing": "New moon"
+          },
+          {
+            "item": "Red flowers",
+            "meaning": "Energy and transformation", 
+            "deity": "Durga",
+            "timing": "Tuesday"
+          }
+        ]
+      },
+      "loreContent": {
+        "mantra": "यज्ञो वै विष्णुः",
+        "translation": "Sacrifice is indeed Vishnu",
+        "context": "The cosmic nature of offering from Taittiriya Samhita"
+      },
+      "reflection": "How does understanding symbolic meaning change your relationship with material objects?"
+    },
+    {
+      "id": 8,
+      "title": "Advanced Ritual Sequences",
+      "sanskrit": "संस्कार क्रम",
+      "description": "Orchestrate complex ceremonies with multiple components",
+      "narrative": "You've learned the notes; now it's time to compose the symphony. Complex rituals weave together all elements—fire, water, air, earth, and space—into a harmonious cosmic dance.",
+      "xpReward": 16,
+      "type": "sequence_orchestration",
+      "difficulty": "advanced",
+      "estimatedTime": "30 minutes",
+      "status": "locked",
+      "gameplayElements": {
+        "type": "sequence_orchestration",
+        "description": "Coordinate multiple ritual elements in proper sequence",
+        "phases": [
+          "Purification and preparation",
+          "Invocation of deities",
+          "Main offering sequence",
+          "Blessing and completion"
+        ]
+      },
+      "loreContent": {
+        "mantra": "संस्कारो हि गुणान्तरधानम्",
+        "translation": "Refinement is the emergence of subtle qualities",
+        "context": "The transformative power of proper ritual sequence"
+      },
+      "reflection": "How does orchestrating complex sequences develop your ability to hold multiple intentions simultaneously?"
+    },
+    {
+      "id": 9,
+      "title": "Reading Cosmic Signs",
+      "sanskrit": "दिव्य लक्षण",
+      "description": "Interpret the subtle signs that indicate ritual success or needed adjustments",
+      "narrative": "The universe is constantly communicating. A flame that flickers in a certain way, the direction of smoke, the calls of birds—all carry messages for those trained to perceive them.",
+      "xpReward": 14,
+      "type": "sign_interpretation",
+      "difficulty": "advanced",
+      "estimatedTime": "25 minutes",
+      "status": "locked",
+      "gameplayElements": {
+        "type": "sign_interpretation",
+        "description": "Interpret various cosmic signs and their ritual implications",
+        "signs": [
+          {
+            "observation": "Flame burns steady and bright",
+            "meaning": "Divine presence is strong",
+            "action": "Continue with confidence"
+          },
+          {
+            "observation": "Smoke drifts eastward",
+            "meaning": "Prayers are being carried to the gods",
+            "action": "Proceed to next phase"
+          }
+        ]
+      },
+      "loreContent": {
+        "mantra": "सर्वं खल्विदं ब्रह्म",
+        "translation": "All this is indeed Brahman",
+        "context": "Everything as divine communication from Chandogya Upanishad"
+      },
+      "reflection": "How does learning to read subtle signs change your awareness in daily life?"
+    },
+    {
+      "id": 10,
+      "title": "Personal Ritual Creation",
+      "sanskrit": "स्व पूजा",
+      "description": "Design your own ritual combining all learned elements for a specific intention",
+      "narrative": "The ultimate test of mastery is creation. Using all you've learned, craft a personal ritual that addresses your unique spiritual needs while honoring ancient wisdom.",
+      "xpReward": 18,
+      "type": "creative_synthesis",
+      "difficulty": "master",
+      "estimatedTime": "40 minutes",
+      "status": "locked",
+      "gameplayElements": {
+        "type": "creative_synthesis",
+        "description": "Create a complete personal ritual combining learned elements",
+        "components": [
+          "Choose intention and timing",
+          "Select appropriate offerings",
+          "Design altar layout",
+          "Sequence ritual phases",
+          "Include mantras and mudras"
+        ]
+      },
+      "loreContent": {
+        "mantra": "स्वाध्यायान्मा प्रमदितव्यम्",
+        "translation": "Let there be no neglect of self-study and practice",
+        "context": "Personal practice as spiritual duty from Taittiriya Upanishad"
+      },
+      "reflection": "How does creating your own ritual deepen your understanding of the principles behind traditional practices?"
+    },
+    {
+      "id": 11,
+      "title": "Vedic Hermeneutics",
+      "sanskrit": "वेद व्याख्या",
+      "description": "Learn the advanced art of interpreting Vedic texts and their ritual applications",
+      "narrative": "The Vedas speak in symbols, metaphors, and multi-layered meanings. Each verse contains practical instructions, philosophical insights, and mystical revelations. Learning to decode these layers is the mark of a true interpreter.",
+      "xpReward": 20,
+      "type": "textual_analysis",
+      "difficulty": "master",
+      "estimatedTime": "35 minutes",
+      "status": "locked",
+      "gameplayElements": {
+        "type": "textual_analysis",
+        "description": "Analyze Vedic verses to extract their ritual, philosophical, and mystical meanings",
+        "verses": [
+          {
+            "text": "अग्निमीले पुरोहितं यज्ञस्य देवमृत्विजम्",
+            "layers": [
+              "Literal: I praise Agni, the priest of sacrifice",
+              "Ritual: Invocation at ceremony beginning",
+              "Mystical: Awakening inner fire of consciousness"
+            ]
+          }
+        ]
+      },
+      "loreContent": {
+        "mantra": "परोक्षप्रिया हि देवाः",
+        "translation": "The gods love what is mysterious/symbolic",
+        "context": "The multilayered nature of sacred language from Shatapatha Brahmana"
+      },
+      "reflection": "How does understanding multiple layers of meaning change your relationship with sacred texts?"
+    },
+    {
+      "id": 12,
+      "title": "The Cosmic Sacrifice",
+      "sanskrit": "विश्व यज्ञ",
+      "description": "Understand ritual as participation in the ongoing cosmic sacrifice that sustains reality",
+      "narrative": "At the deepest level, all ritual is participation in the cosmic yajna—the eternal sacrifice by which the universe maintains itself. Every action becomes sacred when performed with this understanding.",
+      "xpReward": 22,
+      "type": "philosophical_integration",
+      "difficulty": "master",
+      "estimatedTime": "45 minutes",
+      "status": "locked",
+      "gameplayElements": {
+        "type": "philosophical_integration",
+        "description": "Integrate all learned elements into understanding of cosmic sacrifice",
+        "concepts": [
+          "Individual ritual as cosmic participation",
+          "Every action as potential offering",
+          "Consciousness as both priest and sacrifice",
+          "Daily life as continuous ceremony"
+        ]
+      },
+      "loreContent": {
+        "mantra": "यज्ञो हि भूतानां जीवनम्",
+        "translation": "Sacrifice is indeed the life of all beings",
+        "context": "The cosmic sacrifice as universal principle from Mahabharata"
+      },
+      "reflection": "How does seeing all existence as cosmic sacrifice transform your understanding of your role in the universe?"
+    }
+  ],
+  "courseLinks": {
+    "free": {
+      "title": "Intro to Vedic Fire Rituals",
+      "url": "/courses/free-masterclass",
+      "description": "Learn the basics of Agnihotra and daily fire ceremony"
+    },
+    "premium": {
+      "title": "Interpretation of Karma Kanda", 
+      "url": "/courses/premium-courses",
+      "description": "Deep dive into the ritual portions of the Vedas"
+    },
+    "advanced": {
+      "title": "Sacred Texts Mastery",
+      "url": "/courses/sanskrit-live-class", 
+      "description": "Read original Brahmana texts in Sanskrit"
+    }
+  },
+  "loreResources": [
+    {
+      "title": "Agni Sukta",
+      "content": "The hymns to Agni from Rigveda",
+      "type": "mantra_collection"
+    },
+    {
+      "title": "Ritual Geometry",
+      "content": "Sacred mathematics of altar construction",
+      "type": "technical_guide"
+    },
+    {
+      "title": "Audio Pronunciations",
+      "content": "Correct pronunciation of Sanskrit mantras",
+      "type": "audio_resource"
+    }
+  ]
+}
