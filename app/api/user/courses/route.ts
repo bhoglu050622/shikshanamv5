@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { graphyAPI, isJWTExpired, shouldRefreshJWT } from '@/lib/graphy'
 import { cookies } from 'next/headers'
+import { getToken } from 'next-auth/jwt'
 
 // Force dynamic rendering since we use cookies
 export const dynamic = 'force-dynamic'
@@ -8,20 +9,22 @@ export const dynamic = 'force-dynamic'
 export async function GET(request: NextRequest) {
   try {
     const cookieStore = cookies()
-    const authToken = cookieStore.get('auth_token')
-    const graphyJWT = cookieStore.get('graphy_jwt')
+    const cookieGraphyJWT = cookieStore.get('graphy_jwt')?.value
 
-    if (!authToken || !graphyJWT) {
-      return NextResponse.json(
-        { error: 'Not authenticated' },
-        { status: 401 }
-      )
+    // Try to read Graphy JWT from NextAuth token as a fallback
+    const token = await getToken({ req: request, secret: process.env.NEXTAUTH_SECRET })
+    const sessionGraphyJWT = (token as any)?.graphyJWT as string | undefined
+
+    const effectiveJWT = cookieGraphyJWT || sessionGraphyJWT
+
+    if (!effectiveJWT) {
+      return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
     }
 
     // Check if JWT needs refresh
     // For now, we'll use the JWT token directly
     // In production, you'd decode the JWT to check expiry
-    const coursesResponse = await graphyAPI.getUserCourses(graphyJWT.value)
+    const coursesResponse = await graphyAPI.getUserCourses(effectiveJWT)
     
     if (!coursesResponse.success) {
       return NextResponse.json(
