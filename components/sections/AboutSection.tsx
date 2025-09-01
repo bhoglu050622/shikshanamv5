@@ -188,6 +188,7 @@ export default function AboutSection() {
                     <Users className="w-8 h-8 text-white" />
                   </div>
                   <div>
+                    <p className="text-lg font-semibold text-text-light dark:text-text-dark">Vishal Chaurasia</p>
                                 <p className="text-text-secondary-light/90 dark:text-text-secondary-dark/90 font-medium">Founder & Visionary</p>
             <p className="text-sm text-text-secondary-light/80 dark:text-text-secondary-dark/80 mt-2">
               Dedicated to preserving and sharing India's spiritual heritage
@@ -202,6 +203,7 @@ export default function AboutSection() {
                     <BookOpen className="w-8 h-8 text-white" />
                   </div>
                   <div>
+                    <p className="text-lg font-semibold text-text-light dark:text-text-dark">Aman Bhogal</p>
                                 <p className="text-text-secondary-light/90 dark:text-text-secondary-dark/90 font-medium">Co-founder & Technologist</p>
             <p className="text-sm text-text-secondary-light/80 dark:text-text-secondary-dark/80 mt-2">
               Bridging ancient wisdom with modern technology
