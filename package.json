@@ -16,8 +16,6 @@
     "cms:generate:graphQLSchema": "cross-env PAYLOAD_CONFIG_PATH=./payload.config.ts payload generate:graphQLSchema"
   },
   "dependencies": {
-    "@auth/core": "^0.40.0",
-    "@auth/nextjs": "^0.0.0-380f8d56",
     "@payloadcms/db-mongodb": "^3.54.0",
     "@payloadcms/next-payload": "^0.1.11",
     "@payloadcms/richtext-slate": "^3.54.0",
