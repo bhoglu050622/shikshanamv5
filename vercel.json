@@ -3,11 +3,5 @@
   "buildCommand": "next build",
   "outputDirectory": ".next",
   "installCommand": "npm install",
-  "devCommand": "next dev",
-  "regions": ["bom1"],
-  "functions": {
-    "app/**/*.tsx": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  "devCommand": "next dev"
 }
