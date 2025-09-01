@@ -44,9 +44,7 @@ const handler = NextAuth({
       // Send properties to the client
       session.accessToken = token.accessToken
       // Expose Graphy data when available
-      // @ts-expect-error - extended in types/next-auth.d.ts
       session.graphyUser = token.graphyUser
-      // @ts-expect-error - extended in types/next-auth.d.ts
       session.graphyJWT = token.graphyJWT as string | undefined
       return session
     },
