@@ -22,6 +22,12 @@ import {
   Sparkles
 } from 'lucide-react'
 import darshanasData from '@/data/darshanas.json'
+import QuestBoard from '@/components/quest/QuestBoard'
+import ProgressionPath from '@/components/quest/ProgressionPath'
+import XPTracker from '@/components/quest/XPTracker'
+import QuestModal from '@/components/quest/QuestModal'
+import BadgeSystem from '@/components/quest/BadgeSystem'
+import questData from '@/data/mimamsa-quests.json'
 
 // Icon mapping
 const iconMap = {
@@ -64,11 +70,72 @@ export default function DarshanaPage() {
   const params = useParams()
   const slug = params.slug as string
   const [darshana, setDarshana] = useState<Darshana | null>(null)
+  
+  // Quest system state (only for Mimamsa)
+  const [userProgress, setUserProgress] = useState({
+    completedQuests: [] as number[],
+    currentXP: 0,
+    totalSessionTime: 0,
+    streak: 0,
+    lastActiveDate: new Date().toISOString(),
+    unlockedBadges: [] as string[]
+  })
+  
+  const [activeQuestId, setActiveQuestId] = useState<number | null>(null)
+  const [isQuestModalOpen, setIsQuestModalOpen] = useState(false)
+  const [showLoreTab, setShowLoreTab] = useState(false)
 
   useEffect(() => {
     const found = darshanasData.darshanas.find(d => d.id === slug)
     setDarshana(found || null)
+    
+    // Load quest progress for Mimamsa
+    if (slug === 'mimamsa') {
+      const savedProgress = localStorage.getItem('mimamsa-quest-progress')
+      if (savedProgress) {
+        setUserProgress(JSON.parse(savedProgress))
+      }
+    }
   }, [slug])
+
+  // Save progress to localStorage
+  const saveProgress = (progress: typeof userProgress) => {
+    setUserProgress(progress)
+    localStorage.setItem('mimamsa-quest-progress', JSON.stringify(progress))
+  }
+
+  const handleStartQuest = (questId: number) => {
+    setActiveQuestId(questId)
+    setIsQuestModalOpen(true)
+  }
+
+  const handleCompleteQuest = (questId: number, score: number) => {
+    const quest = questData.quests.find(q => q.id === questId)
+    if (!quest) return
+
+    const newProgress = {
+      ...userProgress,
+      completedQuests: [...userProgress.completedQuests, questId].filter((id, index, arr) => arr.indexOf(id) === index),
+      currentXP: userProgress.currentXP + quest.xpReward,
+      lastActiveDate: new Date().toISOString()
+    }
+
+    // Check for new badges
+    const newBadges = questData.badges
+      .filter(badge => 
+        badge.questRequired <= questId && 
+        !userProgress.unlockedBadges.includes(badge.id)
+      )
+      .map(badge => badge.id)
+
+    if (newBadges.length > 0) {
+      newProgress.unlockedBadges = [...userProgress.unlockedBadges, ...newBadges]
+    }
+
+    saveProgress(newProgress)
+    setIsQuestModalOpen(false)
+    setActiveQuestId(null)
+  }
 
   if (!darshana) {
     return (
@@ -233,15 +300,28 @@ export default function DarshanaPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.8 }}
             >
-              <motion.button
-                className={`bg-gradient-to-r ${darshana.color} text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-3 mx-auto group hover:shadow-xl transition-all duration-300`}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Play className="w-5 h-5" />
-                Start Quest (Coming Soon)
-                <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-              </motion.button>
+              {slug === 'mimamsa' ? (
+                <motion.button
+                  onClick={() => setShowLoreTab(!showLoreTab)}
+                  className={`bg-gradient-to-r ${darshana.color} text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-3 mx-auto group hover:shadow-xl transition-all duration-300`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Play className="w-5 h-5" />
+                  {showLoreTab ? 'Hide Quest System' : 'Start Mimamsa Quest'}
+                  <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                </motion.button>
+              ) : (
+                <motion.button
+                  className={`bg-gradient-to-r ${darshana.color} text-white px-8 py-4 rounded-full font-semibold text-lg flex items-center gap-3 mx-auto group hover:shadow-xl transition-all duration-300`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Play className="w-5 h-5" />
+                  Start Quest (Coming Soon)
+                  <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                </motion.button>
+              )}
 
               <Link href={darshana.courseLinks.free}>
                 <motion.button
@@ -322,40 +402,123 @@ export default function DarshanaPage() {
         </div>
       </section>
 
-      {/* Coming Soon Notice */}
-      <section className="py-20 px-4 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5">
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg rounded-3xl p-12 border border-gray-200/50 dark:border-gray-700/50 shadow-xl text-center"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-          >
-            <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark flex items-center justify-center">
-              <Sparkles className="w-8 h-8 text-white" />
-            </div>
-            <h2 className="text-4xl font-serif font-bold mb-6 text-gray-900 dark:text-white">
-              Quest System Coming Soon
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-              We're currently developing an immersive quest system for each darshana. 
-              You'll be able to progress through interactive lessons, earn XP, unlock achievements, 
-              and master ancient wisdom through gamified learning.
-            </p>
-            <Link href="/courses/free-masterclass">
-              <motion.button
-                className="bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark text-white px-10 py-4 rounded-xl font-semibold text-lg flex items-center gap-3 mx-auto hover:shadow-lg hover:shadow-black/25 transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <BookOpen className="w-5 h-5" />
-                Start with Free Masterclass
-                <Sparkles className="w-5 h-5" />
-              </motion.button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      {/* Quest System Section - Only for Mimamsa */}
+      {slug === 'mimamsa' && showLoreTab && (
+        <section className="py-20 px-4 bg-gradient-to-br from-orange-500/5 to-red-600/5 dark:from-orange-500/10 dark:to-red-600/10">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              className="text-center mb-16"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <h2 className="text-4xl font-serif font-bold mb-8 text-gray-900 dark:text-white">
+                Mīmāṃsā Quest System
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                Embark on a sacred journey through 12 immersive quests. Master the art of ritual interpretation, 
+                unlock ancient wisdom, and become a true interpreter of sacred texts.
+              </p>
+            </motion.div>
+
+            {/* Quest Overview */}
+            <motion.div
+              className="grid lg:grid-cols-3 gap-8 mb-16"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              {/* XP Tracker */}
+              <div className="lg:col-span-1">
+                <XPTracker 
+                  userProgress={userProgress}
+                />
+              </div>
+
+              {/* Progression Path */}
+              <div className="lg:col-span-2">
+                <ProgressionPath 
+                  userProgress={userProgress}
+                />
+              </div>
+            </motion.div>
+
+            {/* Quest Board */}
+            <motion.div
+              className="mb-16"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.4 }}
+            >
+              <QuestBoard 
+                userProgress={userProgress}
+                onStartQuest={handleStartQuest}
+              />
+            </motion.div>
+
+            {/* Badge System */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.6 }}
+            >
+              <BadgeSystem 
+                userProgress={userProgress}
+              />
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Coming Soon Notice - Only for non-Mimamsa darshanas */}
+      {slug !== 'mimamsa' && (
+        <section className="py-20 px-4 bg-gradient-to-br from-primary-light/5 to-secondary-light/5 dark:from-primary-dark/5 dark:to-secondary-dark/5">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg rounded-3xl p-12 border border-gray-200/50 dark:border-gray-700/50 shadow-xl text-center"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark flex items-center justify-center">
+                <Sparkles className="w-8 h-8 text-white" />
+              </div>
+              <h2 className="text-4xl font-serif font-bold mb-6 text-gray-900 dark:text-white">
+                Quest System Coming Soon
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+                We're currently developing an immersive quest system for each darshana. 
+                You'll be able to progress through interactive lessons, earn XP, unlock achievements, 
+                and master ancient wisdom through gamified learning.
+              </p>
+              <Link href="/courses/free-masterclass">
+                <motion.button
+                  className="bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark text-white px-10 py-4 rounded-xl font-semibold text-lg flex items-center gap-3 mx-auto hover:shadow-lg hover:shadow-black/25 transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <BookOpen className="w-5 h-5" />
+                  Start with Free Masterclass
+                  <Sparkles className="w-5 h-5" />
+                </motion.button>
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+      )}
+
+      {/* Quest Modal - Only for Mimamsa */}
+      {slug === 'mimamsa' && (
+        <QuestModal
+          questId={activeQuestId}
+          isOpen={isQuestModalOpen}
+          onClose={() => {
+            setIsQuestModalOpen(false)
+            setActiveQuestId(null)
+          }}
+          onComplete={handleCompleteQuest}
+        />
+      )}
     </main>
   )
 }
