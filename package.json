@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@payloadcms/db-mongodb": "^3.54.0",
-    "@payloadcms/next-payload": "^0.1.11",
     "@payloadcms/richtext-slate": "^3.54.0",
     "@radix-ui/react-slot": "^1.2.3",
     "@react-three/drei": "^9.88.13",
