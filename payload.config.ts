@@ -1,5 +1,5 @@
 import { buildConfig } from 'payload';
-import { slateEditor } from '@payloadcms/richtext-slate';
+// import { slateEditor } from '@payloadcms/richtext-slate';
 import { mongooseAdapter } from '@payloadcms/db-mongodb';
 import path from 'path';
 
@@ -59,7 +59,8 @@ export default buildConfig({
   db: mongooseAdapter({
     url: process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/shikshanam-cms',
   }),
-  editor: slateEditor({}),
+  // editor temporarily disabled due to React 19 peer dependency in @payloadcms/richtext-slate
+  // editor: slateEditor({}),
   // Enable live preview
   cors: ['http://localhost:3000', 'http://localhost:3001'],
   csrf: [
