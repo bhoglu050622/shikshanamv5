@@ -349,7 +349,7 @@ export default function DarshanasSection() {
 
         {/* Interactive Chakra Map */}
         <motion.div 
-          className="relative w-full h-96 md:h-[500px] mb-16"
+          className="relative w-full h-80 sm:h-96 md:h-[500px] mb-16"
           style={{ y, opacity }}
         >
           {/* Connection Lines */}

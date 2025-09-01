@@ -385,7 +385,7 @@ const GlobalStyles = () => (
             font-family: var(--font-inter);
             background: linear-gradient(135deg, var(--background-start), var(--background-end));
             color: var(--foreground);
-            min-height: 100vh;
+            min-height: 100dvh;
             overflow-x: hidden;
             transition: background 2s ease-in-out;
             margin: 0;
@@ -497,13 +497,13 @@ const GlobalStyles = () => (
 
         /* Intro Screen */
         #introScreen, .main-content, .result-page, .data-collection-screen { position: relative; z-index: 1; }
-        #introScreen { display: flex; min-height: 100vh; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; }
+        #introScreen { display: flex; min-height: 100dvh; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; }
         .intro-main-content, .intro-footer-content { width: 100%; }
         #introScreen .start-button { padding: 1rem 2.5rem; background: linear-gradient(45deg, var(--primary), var(--secondary)); color: var(--background-end) !important; text-decoration: none; border-radius: 9999px; font-weight: 600; font-size: 1.2rem; transition: var(--transition-mystical); box-shadow: 0 10px 40px -12px hsla(43, 45%, 58%, 0.3); border: none; }
         #introScreen .start-button:hover { transform: scale(1.05); box-shadow: 0 0 30px hsla(43, 45%, 58%, 0.2); }
 
         /* Quiz Content */
-        .main-content { min-height: 100vh; padding: 8rem 0 2rem 0; display: none; }
+        .main-content { min-height: 100dvh; padding: 8rem 0 2rem 0; display: none; }
         .header { text-align: center; margin-bottom: 3rem; }
         .progress-container { position: relative; width: 100px; height: 100px; margin: 0 auto 2rem; }
         .progress-mandala { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
@@ -525,7 +525,7 @@ const GlobalStyles = () => (
         .answer-text { color: var(--foreground) !important; text-shadow: none !important; }
 
         /* Data Collection Screen */
-        .data-collection-screen { display: none; min-height: 100vh; padding: 8rem 0 2rem 0; align-items: center; justify-content: center; text-align: center; }
+        .data-collection-screen { display: none; min-height: 100dvh; padding: 8rem 0 2rem 0; align-items: center; justify-content: center; text-align: center; }
         .data-collection-screen.show { display: flex; animation: fade-in 1s ease-out forwards; }
         .data-form-card { background: hsla(240, 30%, 8%, 0.6); backdrop-filter: blur(12px); border: 1px solid hsla(43, 45%, 58%, 0.2); border-radius: 0.75rem; padding: 3rem 2rem; max-width: 500px; margin: 0 auto; box-shadow: 0 10px 30px hsla(0,0%,0%,0.3); }
         .data-form-card h2 { margin-bottom: 1rem; }
@@ -538,7 +538,7 @@ const GlobalStyles = () => (
         #submitDataBtn:hover { transform: scale(1.02); box-shadow: 0 5px 15px hsla(43, 45%, 58%, 0.2); }
 
         /* Result Page */
-        .result-page { display: none; min-height: 100vh; padding: 3rem 0; }
+        .result-page { display: none; min-height: 100dvh; padding: 3rem 0; }
         .result-page.show { display: block; animation: fade-in 2s ease-out; }
         @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
         .result-header { text-align: center; margin-bottom: 1.5rem; }

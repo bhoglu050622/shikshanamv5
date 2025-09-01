@@ -52,7 +52,7 @@ function Mandala3D() {
       transition={{ duration: 1.5, ease: "easeOut" }}
     >
       {/* Sacred Geometry Mandala */}
-      <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]">
+      <div className="relative w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] max-w-full max-h-full">
         {/* Outer Ring */}
         <motion.div
           className="absolute inset-0 border-2 border-primary-light/30 dark:border-primary-dark/30 rounded-full"

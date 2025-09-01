@@ -51,6 +51,20 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
+/* Safe viewport and fixed header offsets */
+html {
+  scroll-padding-top: 4rem;
+}
+
+@supports (height: 100dvh) {
+  .min-h-screen { min-height: 100dvh; }
+  .h-screen { height: 100dvh; }
+}
+
+/* Responsive media defaults */
+img, video { max-width: 100%; height: auto; }
+iframe { max-width: 100%; }
+
 /* Theme-aware background patterns */
 .theme-bg-pattern {
   background-image: var(--bg-pattern);

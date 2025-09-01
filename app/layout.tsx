@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display, Noto_Sans_Devanagari } from 'next/font/google'
 import './globals.css'
 import Navigation from '@/components/Navigation'
@@ -47,6 +47,12 @@ export const metadata: Metadata = {
     description: 'Premium courses, resources & communities built around the Six Darshanas',
     images: ['/og-image.jpg'],
   },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
 }
 
 export default function RootLayout({
